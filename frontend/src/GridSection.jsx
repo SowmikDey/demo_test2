@@ -1,0 +1,146 @@
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import Model3DViewer from "./Model3DViewer";
+
+const GridSection = () => {
+  const { ref, inView } = useInView({
+    threshold: 0.1,
+    triggerOnce: false,
+  });
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.5,
+      },
+    },
+  };
+
+  const categories = [
+    {
+      id: 1,
+      title: "Chairs",
+      category: "SEATING",
+      model: "/Model/base_basic_shaded.glb", // Update with your actual model filename
+      description: "Discover our collection of comfortable and stylish chairs for every space.",
+      itemCount: "24+ Items"
+    },
+    {
+      id: 2,
+      title: "Beds",
+      category: "BEDROOM",
+      model: "/Model/bed.glb", // Update with your actual model filename
+      description: "Explore premium beds designed for ultimate comfort and elegant bedroom aesthetics.",
+      itemCount: "18+ Items"
+    },
+    {
+      id: 3,
+      title: "Dining Tables",
+      category: "DINING",
+      model: "/Model/dining.glb", // Update with your actual model filename
+      description: "Browse our dining tables perfect for family gatherings and special occasions.",
+      itemCount: "15+ Items"
+    },
+    {
+      id: 4,
+      title: "Sofas",
+      category: "LIVING ROOM",
+      model: "/Model/sofa.glb", // Update with your actual model filename
+      description: "Find the perfect sofa that combines luxury, comfort, and contemporary design.",
+      itemCount: "20+ Items"
+    },
+    {
+      id: 5,
+      title: "Storage",
+      category: "ORGANIZATION",
+      model: "/Model/storage.glb", // Update with your actual model filename
+      description: "Smart storage solutions including wardrobes, cabinets, and shelving units.",
+      itemCount: "30+ Items"
+    },
+    {
+      id: 6,
+      title: "Tables",
+      category: "FURNITURE",
+      model: "/Model/table.glb", // Update with your actual model filename
+      description: "Versatile tables for coffee, study, and work - designed for modern living.",
+      itemCount: "22+ Items"
+    },
+  ];
+
+  return (
+    <section className="min-h-screen bg-gray-50 py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8">
+      <div className="max-w-7xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: -20 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-12 md:mb-16"
+        >
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-3 md:mb-4">
+            Our Furniture Collection
+          </h2>
+          <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-4">
+            Explore our 3D furniture models. Rotate, zoom, and view every detail before you buy.
+          </p>
+        </motion.div>
+
+        <motion.div
+          ref={ref}
+          variants={containerVariants}
+          initial="hidden"
+          animate={inView ? "visible" : "hidden"}
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
+        >
+          {categories.map((category) => (
+            <motion.div
+              key={category.id}
+              variants={itemVariants}
+              className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300 group"
+            >
+              {/* 3D Model Viewer Container */}
+              <div className="relative h-64 sm:h-72 overflow-hidden bg-gradient-to-br from-gray-50 to-gray-100">
+                <Model3DViewer 
+                  modelPath={category.model}
+                  alt={category.title}
+                  className="w-full h-full"
+                />
+                <div className="absolute top-3 sm:top-4 left-3 sm:left-4 bg-indigo-500 text-white px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-medium z-10">
+                  {category.category}
+                </div>
+                <div className="absolute top-3 sm:top-4 right-3 sm:right-4 bg-white/90 backdrop-blur-sm text-gray-700 px-2 sm:px-3 py-1 rounded-full text-xs font-medium z-10">
+                  {category.itemCount}
+                </div>
+              </div>
+
+              {/* Card Content */}
+              <div className="p-4 sm:p-6">
+                <h3 className="text-xl sm:text-2xl font-semibold text-gray-900 mb-2">
+                  {category.title}
+                </h3>
+                <p className="text-sm sm:text-base text-gray-600 mb-4 sm:mb-6">{category.description}</p>
+                <button className="w-full bg-indigo-500 text-white font-medium py-2.5 sm:py-3 px-4 sm:px-6 rounded-lg hover:bg-indigo-600 transition-all active:scale-95 group-hover:shadow-lg text-sm sm:text-base">
+                  Explore {category.title} →
+                </button>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
+export default GridSection;
