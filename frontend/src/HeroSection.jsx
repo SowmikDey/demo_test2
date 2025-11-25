@@ -3,14 +3,26 @@ import { useEffect, useRef, useState } from "react";
 
 const HeroSection = () => {
   return (
-    <section className="w-full min-h-screen px-4 sm:px-6 md:px-8 py-12 grid grid-cols-1 md:grid-cols-2 items-center gap-8 md:gap-12 max-w-6xl mx-auto">
+    <section className="w-full min-h-screen px-4 sm:px-6 md:px-8 py-16 md:py-20 grid grid-cols-1 md:grid-cols-2 items-center gap-12 md:gap-16 max-w-7xl mx-auto bg-[#faf8f5]">
       <div className="order-2 md:order-1 flex flex-col">
-        <span className="block mb-4 text-xs md:text-sm text-indigo-500 font-medium">
-          Better every day
-        </span>
-        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold leading-tight mb-4">
+        <motion.span 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="block mb-6 text-xs md:text-sm text-[#8b7355] font-medium uppercase tracking-wider"
+        >
+          Timeless Elegance Since 2024
+        </motion.span>
+        
+        <motion.h1 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-[#2c2416]"
+          style={{ fontFamily: "'Playfair Display', serif" }}
+        >
           Welcome to{" "}
-          <span className="font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+          <span className="font-bold bg-gradient-to-r from-[#8b7355] to-[#6b5744] bg-clip-text text-transparent">
             Home Design Furnitures
           </span>
           , where{" "}
@@ -29,28 +41,43 @@ const HeroSection = () => {
                   ease: "easeInOut",
                 }}
                 d="M142.293 1C106.854 16.8908 6.08202 7.17705 1.23654 43.3756C-2.10604 68.3466 29.5633 73.2652 122.688 71.7518C215.814 70.2384 316.298 70.689 275.761 38.0785C230.14 1.37835 97.0503 24.4575 52.9384 1"
-                stroke="#FACC15"
+                stroke="#d4a574"
                 strokeWidth="3"
               />
             </svg>
           </span>{" "}
           meets everyday comfort.
-        </h1>
-        <p className="text-sm sm:text-base md:text-lg text-slate-700 mb-6 md:mb-8">
-          Discover furniture that transforms your house into a home. Quality craftsmanship, timeless designs, and comfort you can count on.
-        </p>
-        <motion.div
-          className="flex items-center gap-2 text-indigo-500 font-medium text-base sm:text-lg"
-          animate={{
-            y: [0, -10, 0],
-          }}
-          transition={{
-            duration: 2,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
+        </motion.h1>
+        
+        <motion.p 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="text-base sm:text-lg md:text-xl text-[#5a4a3a] mb-8 leading-relaxed font-light"
+          style={{ fontFamily: "'Montserrat', sans-serif" }}
         >
-          <span>Scroll to check our collection</span>
+          Discover furniture that transforms your house into a home. Quality craftsmanship, timeless designs, and comfort you can count on.
+        </motion.p>
+        
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          className="flex items-center gap-3 text-[#8b7355] font-medium text-base sm:text-lg"
+        >
+          <motion.span
+            animate={{
+              y: [0, -8, 0],
+            }}
+            transition={{
+              duration: 2,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+            className="tracking-wide"
+          >
+            Scroll to explore our collection
+          </motion.span>
           <motion.svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -74,9 +101,15 @@ const HeroSection = () => {
           </motion.svg>
         </motion.div>
       </div>
-      <div className="order-1 md:order-2 w-full">
+      
+      <motion.div 
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8, delay: 0.3 }}
+        className="order-1 md:order-2 w-full"
+      >
         <ShuffleGrid />
-      </div>
+      </motion.div>
     </section>
   );
 };
@@ -101,67 +134,67 @@ const shuffle = (array) => {
 const squareData = [
   {
     id: 1,
-    src: "https://images.unsplash.com/photo-1547347298-4074fc3086f0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+    src: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80",
   },
   {
     id: 2,
-    src: "https://images.unsplash.com/photo-1510925758641-869d353cecc7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+    src: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80",
   },
   {
     id: 3,
-    src: "https://images.unsplash.com/photo-1629901925121-8a141c2a42f4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+    src: "https://images.unsplash.com/photo-1540574163026-643ea20ade25?w=800&q=80",
   },
   {
     id: 4,
-    src: "https://images.unsplash.com/photo-1580238053495-b9720401fd45?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+    src: "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=800&q=80",
   },
   {
     id: 5,
-    src: "https://images.unsplash.com/photo-1569074187119-c87815b476da?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1325&q=80",
+    src: "https://images.unsplash.com/photo-1586105251261-72a756497a11?w=800&q=80",
   },
   {
     id: 6,
-    src: "https://images.unsplash.com/photo-1556817411-31ae72fa3ea0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+    src: "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=800&q=80",
   },
   {
     id: 7,
-    src: "https://images.unsplash.com/photo-1599586120429-48281b6f0ece?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+    src: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=800&q=80",
   },
   {
     id: 8,
-    src: "https://plus.unsplash.com/premium_photo-1671436824833-91c0741e89c9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+    src: "https://images.unsplash.com/photo-1551298370-9d3d53740c72?w=800&q=80",
   },
   {
     id: 9,
-    src: "https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
+    src: "https://images.unsplash.com/photo-1618220179428-22790b461013?w=800&q=80",
   },
   {
     id: 10,
-    src: "https://images.unsplash.com/photo-1610768764270-790fbec18178?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+    src: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&q=80",
   },
   {
     id: 11,
-    src: "https://images.unsplash.com/photo-1507034589631-9433cc6bc453?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=684&q=80",
+    src: "https://images.unsplash.com/photo-1538688525198-9b88f6f53126?w=800&q=80",
   },
   {
     id: 12,
-    src: "https://images.unsplash.com/photo-1533107862482-0e6974b06ec4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=882&q=80",
+    src: "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=800&q=80",
   },
   {
     id: 13,
-    src: "https://images.unsplash.com/photo-1560089000-7433a4ebbd64?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+    src: "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=800&q=80",
   },
   {
     id: 14,
-    src: "https://images.unsplash.com/photo-1517466787929-bc90951d0974?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=686&q=80",
+    src: "https://images.unsplash.com/photo-1565183997392-2f6f122e5912?w=800&q=80",
   },
   {
     id: 15,
-    src: "https://images.unsplash.com/photo-1606244864456-8bee63fce472?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=681&q=80",
+    src: "https://images.unsplash.com/photo-1550581190-9c1c48d21d6c?w=800&q=80",
   },
   {
     id: 16,
-    src: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1820&q=80",
+    src: "https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=800&q=80",
   },
 ];
 
@@ -171,10 +204,11 @@ const generateSquares = () => {
       key={sq.id}
       layout
       transition={{ duration: 1.5, type: "spring" }}
-      className="w-full h-full"
+      className="w-full h-full rounded-lg shadow-md overflow-hidden"
       style={{
         backgroundImage: `url(${sq.src})`,
         backgroundSize: "cover",
+        backgroundPosition: "center",
       }}
     ></motion.div>
   ));
@@ -197,7 +231,7 @@ const ShuffleGrid = () => {
   };
 
   return (
-    <div className="grid grid-cols-4 grid-rows-4 h-[300px] sm:h-[350px] md:h-[400px] lg:h-[450px] gap-1 w-full">
+    <div className="grid grid-cols-4 grid-rows-4 h-[300px] sm:h-[350px] md:h-[400px] lg:h-[500px] gap-2 w-full">
       {squares}
     </div>
   );

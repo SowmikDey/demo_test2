@@ -3,8 +3,14 @@ import { motion } from "framer-motion";
 
 const Navbar = () => {
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-sm border-b border-gray-200">
-      <div className="max-w-7xl mx-auto px-8 py-4">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-[#faf8f5]/95 backdrop-blur-md border-b border-[#d4c5b0]/30">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-4 flex items-center justify-between">
+        {/* Logo */}
+        <div className="font-serif text-2xl md:text-3xl font-bold text-[#2c2416] tracking-tight">
+          Home Design
+        </div>
+        
+        {/* Navigation Tabs */}
         <SlideTabs />
       </div>
     </nav>
@@ -26,13 +32,12 @@ const SlideTabs = () => {
           opacity: 0,
         }));
       }}
-      className="relative mx-auto flex w-fit rounded-full border-2 border-black bg-white p-1"
+      className="relative hidden md:flex w-fit rounded-full border border-[#2c2416]/20 bg-white/50 backdrop-blur-sm p-1 shadow-sm"
     >
       <Tab setPosition={setPosition}>Home</Tab>
-      <Tab setPosition={setPosition}>Pricing</Tab>
-      <Tab setPosition={setPosition}>Features</Tab>
-      <Tab setPosition={setPosition}>Docs</Tab>
-      <Tab setPosition={setPosition}>Blog</Tab>
+      <Tab setPosition={setPosition}>Collection</Tab>
+      <Tab setPosition={setPosition}>About</Tab>
+      <Tab setPosition={setPosition}>Contact</Tab>
       <Cursor position={position} />
     </ul>
   );
@@ -53,7 +58,7 @@ const Tab = ({ children, setPosition }) => {
           opacity: 1,
         });
       }}
-      className="relative z-10 block cursor-pointer px-3 py-1.5 text-xs uppercase text-white mix-blend-difference md:px-5 md:py-3 md:text-base"
+      className="relative z-10 block cursor-pointer px-4 py-2 text-sm font-medium text-[#2c2416] hover:text-[#2c2416] transition-colors"
     >
       {children}
     </li>
@@ -66,7 +71,12 @@ const Cursor = ({ position }) => {
       animate={{
         ...position,
       }}
-      className="absolute z-0 h-7 rounded-full bg-black md:h-12"
+      transition={{
+        type: "spring",
+        stiffness: 300,
+        damping: 30,
+      }}
+      className="absolute z-0 h-full rounded-full bg-[#2c2416]"
     />
   );
 };

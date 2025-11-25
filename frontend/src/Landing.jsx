@@ -17,7 +17,7 @@ const Landing = () => {
   const heroY = useTransform(scrollYProgress, [0, 0.5], [0, -100]);
 
   return (
-    <div className="relative bg-white">
+    <div className="relative bg-[#faf8f5]">
       {/* Fixed Navbar */}
       <Navbar />
 
@@ -30,22 +30,28 @@ const Landing = () => {
             scale: heroScale,
             y: heroY,
           }}
-          className="sticky top-20 z-10"
+          className="sticky top-20 z-10 bg-[#faf8f5]"
         >
           <HeroSection />
         </motion.div>
 
         {/* Grid Section that fades in */}
-        <div className="relative z-20 bg-gray-50">
+        <div className="relative z-20 bg-[#f5f1eb]">
           <GridSection />
           
           {/* Placeholder for future sections */}
-          <div className="min-h-screen bg-white py-20 px-8">
+          <div className="min-h-screen bg-[#faf8f5] py-20 px-8">
             <div className="max-w-6xl mx-auto text-center">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              <h2 
+                className="text-4xl md:text-5xl font-bold text-[#2c2416] mb-4"
+                style={{ fontFamily: "'Playfair Display', serif" }}
+              >
                 More Sections Coming Soon
               </h2>
-              <p className="text-lg text-gray-600">
+              <p 
+                className="text-lg text-[#5a4a3a] font-light"
+                style={{ fontFamily: "'Montserrat', sans-serif" }}
+              >
                 Add your additional sections here by creating new component files
               </p>
             </div>
