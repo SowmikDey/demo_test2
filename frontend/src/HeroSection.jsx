@@ -5,7 +5,7 @@ const HeroSection = () => {
   return (
     <section className="w-full min-h-screen px-4 sm:px-6 md:px-8 py-16 md:py-20 grid grid-cols-1 md:grid-cols-2 items-center gap-12 md:gap-16 max-w-7xl mx-auto bg-[#faf8f5]">
       <div className="order-2 md:order-1 flex flex-col">
-        <motion.span 
+        <motion.span
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -13,8 +13,8 @@ const HeroSection = () => {
         >
           Timeless Elegance Since 2024
         </motion.span>
-        
-        <motion.h1 
+
+        <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -31,7 +31,8 @@ const HeroSection = () => {
             <svg
               viewBox="0 0 286 73"
               fill="none"
-              className="absolute -left-2 -right-2 -top-2 bottom-0 translate-y-1 w-full h-auto"
+              className="absolute -left-4 -translate-x-1/2 -top-10 w-[110%] h-auto"
+              style={{ transform: "scaleY(0.6)", transformOrigin: "center" }}
             >
               <motion.path
                 initial={{ pathLength: 0 }}
@@ -48,17 +49,18 @@ const HeroSection = () => {
           </span>{" "}
           meets everyday comfort.
         </motion.h1>
-        
-        <motion.p 
+
+        <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-base sm:text-lg md:text-xl text-[#5a4a3a] mb-8 leading-relaxed font-light"
           style={{ fontFamily: "'Montserrat', sans-serif" }}
         >
-          Discover furniture that transforms your house into a home. Quality craftsmanship, timeless designs, and comfort you can count on.
+          Discover furniture that transforms your house into a home. Quality
+          craftsmanship, timeless designs, and comfort you can count on.
         </motion.p>
-        
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -97,12 +99,12 @@ const HeroSection = () => {
               ease: "easeInOut",
             }}
           >
-            <path d="M12 5v14M19 12l-7 7-7-7"/>
+            <path d="M12 5v14M19 12l-7 7-7-7" />
           </motion.svg>
         </motion.div>
       </div>
-      
-      <motion.div 
+
+      <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, delay: 0.3 }}
@@ -231,7 +233,7 @@ const ShuffleGrid = () => {
   };
 
   return (
-    <div className="grid grid-cols-4 grid-rows-4 h-[300px] sm:h-[350px] md:h-[400px] lg:h-[500px] gap-2 w-full">
+    <div className="grid grid-cols-4 grid-rows-4 h-[330px] sm:h-[380px] md:h-[430px] lg:h-[550px] gap-3 w-full">
       {squares}
     </div>
   );

@@ -58,7 +58,7 @@ const Tab = ({ children, setPosition }) => {
           opacity: 1,
         });
       }}
-      className="relative z-10 block cursor-pointer px-4 py-2 text-sm font-medium text-[#2c2416] hover:text-[#2c2416] transition-colors"
+      className="relative z-10 block cursor-pointer px-4 py-2 text-sm font-medium text-[#2c2416] hover:text-[#ffffff] transition-colors"
     >
       {children}
     </li>
@@ -76,7 +76,7 @@ const Cursor = ({ position }) => {
         stiffness: 300,
         damping: 30,
       }}
-      className="absolute z-0 h-full rounded-full bg-[#2c2416]"
+      className="absolute top-0 left-0 z-0 h-full rounded-full bg-[#6d573b]"
     />
   );
 };
