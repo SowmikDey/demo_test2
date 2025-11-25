@@ -134,7 +134,6 @@ const shuffle = (array) => {
 const squareData = [
   {
     id: 1,
-<<<<<<< HEAD
     src: "https://images.unsplash.com/photo-1556912173-46c336c7fd55?w=800&q=80",
   },
   {
@@ -196,69 +195,6 @@ const squareData = [
   {
     id: 16,
     src: "https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf?w=800&q=80",
-=======
-    src: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80",
-  },
-  {
-    id: 2,
-    src: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80",
-  },
-  {
-    id: 3,
-    src: "https://images.unsplash.com/photo-1540574163026-643ea20ade25?w=800&q=80",
-  },
-  {
-    id: 4,
-    src: "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=800&q=80",
-  },
-  {
-    id: 5,
-    src: "https://images.unsplash.com/photo-1586105251261-72a756497a11?w=800&q=80",
-  },
-  {
-    id: 6,
-    src: "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=800&q=80",
-  },
-  {
-    id: 7,
-    src: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=800&q=80",
-  },
-  {
-    id: 8,
-    src: "https://images.unsplash.com/photo-1551298370-9d3d53740c72?w=800&q=80",
-  },
-  {
-    id: 9,
-    src: "https://images.unsplash.com/photo-1618220179428-22790b461013?w=800&q=80",
-  },
-  {
-    id: 10,
-    src: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&q=80",
-  },
-  {
-    id: 11,
-    src: "https://images.unsplash.com/photo-1538688525198-9b88f6f53126?w=800&q=80",
-  },
-  {
-    id: 12,
-    src: "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=800&q=80",
-  },
-  {
-    id: 13,
-    src: "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=800&q=80",
-  },
-  {
-    id: 14,
-    src: "https://images.unsplash.com/photo-1565183997392-2f6f122e5912?w=800&q=80",
-  },
-  {
-    id: 15,
-    src: "https://images.unsplash.com/photo-1550581190-9c1c48d21d6c?w=800&q=80",
-  },
-  {
-    id: 16,
-    src: "https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=800&q=80",
->>>>>>> da13b1ebb9ef8d249092fcd464e572a4c46c97fd
   },
 ];
 

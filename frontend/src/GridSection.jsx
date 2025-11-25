@@ -35,78 +35,48 @@ const GridSection = () => {
       id: 1,
       title: "Chairs",
       category: "SEATING",
-<<<<<<< HEAD
       model: "/Model/base_basic_shaded.glb", // Update with your actual model filename
       description: "Crafted using premium materials and precision German technology. Designed for long-lasting comfort with sturdy, stylish construction. Perfect for enhancing any living, study, or dining space beautifully.",
-=======
-      model: "/Model/base_basic_shaded.glb",
-      description: "Discover our collection of comfortable and stylish chairs for every space.",
->>>>>>> da13b1ebb9ef8d249092fcd464e572a4c46c97fd
       itemCount: "24+ Items"
     },
     {
       id: 2,
       title: "Beds",
       category: "BEDROOM",
-<<<<<<< HEAD
       model: "/Model/base_basic_shaded_bed.glb", // Update with your actual model filename
       description: "Built with eco-friendly, durable materials for a premium bedroom experience. Designed using advanced German machinery for precision and strength. Provides a modern, cozy, and long-lasting sleep environment.",
-=======
-      model: "/Model/bed.glb",
-      description: "Explore premium beds designed for ultimate comfort and elegant bedroom aesthetics.",
->>>>>>> da13b1ebb9ef8d249092fcd464e572a4c46c97fd
       itemCount: "18+ Items"
     },
     {
       id: 3,
       title: "Dining Tables",
       category: "DINING",
-<<<<<<< HEAD
       model: "/Model/base_basic_shaded_dinning.glb", // Update with your actual model filename
       description: "Made from high-quality engineered wood and crafted with CNC German technology. Strong, elegant, and built to last with superior finishing. Perfect for creating a warm, welcoming dining space.",
-=======
-      model: "/Model/dining.glb",
-      description: "Browse our dining tables perfect for family gatherings and special occasions.",
->>>>>>> da13b1ebb9ef8d249092fcd464e572a4c46c97fd
       itemCount: "15+ Items"
     },
     {
       id: 4,
       title: "Sofas",
       category: "LIVING ROOM",
-<<<<<<< HEAD
       model: "/Model/base_basic_shaded_sofa.glb", // Update with your actual model filename
       description: "Constructed with teak/kapoor internal frame and white ash German wood. Features certified high-density foam for exceptional comfort and support. Designed for a stylish, durable, and modern living room look.",
-=======
-      model: "/Model/sofa.glb",
-      description: "Find the perfect sofa that combines luxury, comfort, and contemporary design.",
->>>>>>> da13b1ebb9ef8d249092fcd464e572a4c46c97fd
       itemCount: "20+ Items"
     },
     {
       id: 5,
       title: "Storage",
       category: "ORGANIZATION",
-<<<<<<< HEAD
       model: "/Model/base_basic_shaded_storage.glb", // Update with your actual model filename
       description: "Made with 18mm calibrated plywood and branded hardware fittings. Built using advanced German CNC technology for flawless finish and durability. Offers optimized space, smooth operation, and long-lasting performance.",
-=======
-      model: "/Model/storage.glb",
-      description: "Smart storage solutions including wardrobes, cabinets, and shelving units.",
->>>>>>> da13b1ebb9ef8d249092fcd464e572a4c46c97fd
       itemCount: "30+ Items"
     },
     {
       id: 6,
       title: "Tables",
       category: "FURNITURE",
-<<<<<<< HEAD
       model: "/Model/base_basic_shaded_table.glb", // Update with your actual model filename
       description: "Crafted with premium plywood and precision German CNC technology. Designed for durability, stability, and long hours of productive work. Features a clean, functional layout to keep your workspace organized and efficient.",
-=======
-      model: "/Model/table.glb",
-      description: "Versatile tables for coffee, study, and work - designed for modern living.",
->>>>>>> da13b1ebb9ef8d249092fcd464e572a4c46c97fd
       itemCount: "22+ Items"
     },
   ];
