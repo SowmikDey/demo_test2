@@ -24,7 +24,7 @@ const Landing = () => {
       <Navbar />
 
       {/* Main Content with top padding to account for fixed navbar */}
-      <div ref={containerRef} className="pt-20">
+      <div ref={containerRef} className="">
         {/* Hero Section with Parallax Effect */}
         <motion.div
           style={{
@@ -32,7 +32,7 @@ const Landing = () => {
             scale: heroScale,
             y: heroY,
           }}
-          className="sticky top-20 z-10 bg-[#faf8f5]"
+          className="sticky top-5 z-10 bg-[#faf8f5]"
         >
           <HeroSection />
         </motion.div>

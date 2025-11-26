@@ -5,7 +5,7 @@ const HeroSection = () => {
   return (
     <section className="w-full min-h-screen px-4 sm:px-6 md:px-8 py-16 md:py-20 grid grid-cols-1 md:grid-cols-2 items-center gap-12 md:gap-16 max-w-7xl mx-auto bg-[#faf8f5]">
       <div className="order-2 md:order-1 flex flex-col">
-        <motion.span 
+        <motion.span
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -13,8 +13,8 @@ const HeroSection = () => {
         >
           Timeless Elegance Since 2024
         </motion.span>
-        
-        <motion.h1 
+
+        <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -31,7 +31,8 @@ const HeroSection = () => {
             <svg
               viewBox="0 0 286 73"
               fill="none"
-              className="absolute -left-2 -right-2 -top-2 bottom-0 translate-y-1 w-full h-auto"
+              className="absolute -left-4 -translate-x-1/2 -top-10 w-[110%] h-auto"
+              style={{ transform: "scaleY(0.6)", transformOrigin: "center" }}
             >
               <motion.path
                 initial={{ pathLength: 0 }}
@@ -48,17 +49,18 @@ const HeroSection = () => {
           </span>{" "}
           meets everyday comfort.
         </motion.h1>
-        
-        <motion.p 
+
+        <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
           className="text-base sm:text-lg md:text-xl text-[#5a4a3a] mb-8 leading-relaxed font-light"
           style={{ fontFamily: "'Montserrat', sans-serif" }}
         >
-          Discover furniture that transforms your house into a home. Quality craftsmanship, timeless designs, and comfort you can count on.
+          Discover furniture that transforms your house into a home. Quality
+          craftsmanship, timeless designs, and comfort you can count on.
         </motion.p>
-        
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -97,12 +99,12 @@ const HeroSection = () => {
               ease: "easeInOut",
             }}
           >
-            <path d="M12 5v14M19 12l-7 7-7-7"/>
+            <path d="M12 5v14M19 12l-7 7-7-7" />
           </motion.svg>
         </motion.div>
       </div>
-      
-      <motion.div 
+
+      <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, delay: 0.3 }}
@@ -134,67 +136,67 @@ const shuffle = (array) => {
 const squareData = [
   {
     id: 1,
-    src: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80",
+    src: "https://images.unsplash.com/photo-1556912173-46c336c7fd55?w=800&q=80",
   },
   {
     id: 2,
-    src: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80",
+    src: "https://images.unsplash.com/photo-1540518614846-7eded433c457?w=800&q=80",
   },
   {
     id: 3,
-    src: "https://images.unsplash.com/photo-1540574163026-643ea20ade25?w=800&q=80",
+    src: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=800&q=80",
   },
   {
     id: 4,
-    src: "https://images.unsplash.com/photo-1567538096630-e0c55bd6374c?w=800&q=80",
-  },
-  {
-    id: 5,
-    src: "https://images.unsplash.com/photo-1586105251261-72a756497a11?w=800&q=80",
-  },
-  {
-    id: 6,
-    src: "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=800&q=80",
-  },
-  {
-    id: 7,
-    src: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=800&q=80",
-  },
-  {
-    id: 8,
-    src: "https://images.unsplash.com/photo-1551298370-9d3d53740c72?w=800&q=80",
-  },
-  {
-    id: 9,
-    src: "https://images.unsplash.com/photo-1618220179428-22790b461013?w=800&q=80",
-  },
-  {
-    id: 10,
     src: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=800&q=80",
   },
   {
+    id: 5,
+    src: "https://images.unsplash.com/photo-1567016432779-094069958ea5?w=800&q=80",
+  },
+  {
+    id: 6,
+    src: "https://images.unsplash.com/photo-1616137466211-f939a420be84?w=800&q=80",
+  },
+  {
+    id: 7,
+    src: "https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=800&q=80",
+  },
+  {
+    id: 8,
+    src: "https://images.unsplash.com/photo-1484101403633-562f891dc89a?w=800&q=80",
+  },
+  {
+    id: 9,
+    src: "https://images.unsplash.com/photo-1513694203232-719a280e022f?w=800&q=80",
+  },
+  {
+    id: 10,
+    src: "https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=800&q=80",
+  },
+  {
     id: 11,
-    src: "https://images.unsplash.com/photo-1538688525198-9b88f6f53126?w=800&q=80",
+    src: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80",
   },
   {
     id: 12,
-    src: "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=800&q=80",
+    src: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&q=80",
   },
   {
     id: 13,
-    src: "https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=800&q=80",
+    src: "https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=800&q=80",
   },
   {
     id: 14,
-    src: "https://images.unsplash.com/photo-1565183997392-2f6f122e5912?w=800&q=80",
+    src: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80",
   },
   {
     id: 15,
-    src: "https://images.unsplash.com/photo-1550581190-9c1c48d21d6c?w=800&q=80",
+    src: "https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=800&q=80",
   },
   {
     id: 16,
-    src: "https://images.unsplash.com/photo-1566665797739-1674de7a421a?w=800&q=80",
+    src: "https://images.unsplash.com/photo-1487017159836-4e23ece2e4cf?w=800&q=80",
   },
 ];
 
@@ -231,7 +233,7 @@ const ShuffleGrid = () => {
   };
 
   return (
-    <div className="grid grid-cols-4 grid-rows-4 h-[300px] sm:h-[350px] md:h-[400px] lg:h-[500px] gap-2 w-full">
+    <div className="grid grid-cols-4 grid-rows-4 h-[330px] sm:h-[380px] md:h-[430px] lg:h-[550px] gap-3 w-full">
       {squares}
     </div>
   );
