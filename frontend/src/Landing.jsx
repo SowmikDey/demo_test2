@@ -3,6 +3,8 @@ import { useRef } from "react";
 import Navbar from "./Navbar";
 import HeroSection from "./HeroSection";
 import GridSection from "./GridSection";
+import StatsSection from "./StatsSection";
+import TestimonialScroll from "./TestimonialScroll";
 
 const Landing = () => {
   const containerRef = useRef(null);
@@ -38,6 +40,10 @@ const Landing = () => {
         {/* Grid Section that fades in */}
         <div className="relative z-20 bg-[#f5f1eb]">
           <GridSection />
+          
+          {/* Stats Section */}
+          <StatsSection />
+          <TestimonialScroll />
           
           {/* Placeholder for future sections */}
           <div className="min-h-screen bg-[#faf8f5] py-20 px-8">
