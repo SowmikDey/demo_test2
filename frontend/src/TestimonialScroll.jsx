@@ -133,18 +133,6 @@ const TestimonialScroll = () => {
           ))}
         </motion.div>
       </div>
-
-      {/* Scroll Indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        className="text-center mt-12"
-      >
-        <p className="text-sm text-[#5a4a3a] font-light">
-          Scroll to see more testimonials →
-        </p>
-      </motion.div>
     </div>
   );
 };

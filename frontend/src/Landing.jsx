@@ -5,6 +5,7 @@ import HeroSection from "./HeroSection";
 import GridSection from "./GridSection";
 import StatsSection from "./StatsSection";
 import TestimonialScroll from "./TestimonialScroll";
+import Footer from "./Footer";
 
 const Landing = () => {
   const containerRef = useRef(null);
@@ -44,24 +45,7 @@ const Landing = () => {
           {/* Stats Section */}
           <StatsSection />
           <TestimonialScroll />
-          
-          {/* Placeholder for future sections */}
-          <div className="min-h-screen bg-[#faf8f5] py-20 px-8">
-            <div className="max-w-6xl mx-auto text-center">
-              <h2 
-                className="text-4xl md:text-5xl font-bold text-[#2c2416] mb-4"
-                style={{ fontFamily: "'Playfair Display', serif" }}
-              >
-                More Sections Coming Soon
-              </h2>
-              <p 
-                className="text-lg text-[#5a4a3a] font-light"
-                style={{ fontFamily: "'Montserrat', sans-serif" }}
-              >
-                Add your additional sections here by creating new component files
-              </p>
-            </div>
-          </div>
+          <Footer />
         </div>
       </div>
     </div>
