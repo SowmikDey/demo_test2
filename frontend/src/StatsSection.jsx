@@ -3,19 +3,19 @@ import CountUp from './CountUp';
 const StatsSection = () => {
   const stats = [
     {
-      value: 45,
-      suffix: '%',
-      label: 'Lorem ipsum dolor sit amet consectetur'
-    },
-    {
-      value: 15.5,
+      value: 10,
       suffix: 'K+',
-      label: 'Lorem ipsum dolor sit amet consectetur'
+      label: 'Happy customers who transformed their homes'
     },
     {
-      value: 20,
-      suffix: 'B+',
-      label: 'Lorem ipsum dolor sit amet consectetur'
+      value: 500,
+      suffix: '+',
+      label: 'Unique furniture pieces in our collection'
+    },
+    {
+      value: 15,
+      suffix: '+',
+      label: 'Years of craftsmanship and design excellence'
     }
   ];
 
